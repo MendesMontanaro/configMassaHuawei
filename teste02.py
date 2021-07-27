@@ -3,11 +3,13 @@ import logging
 logging.basicConfig(filename="test.log", level=logging.DEBUG)   # It will log all reads and writes on the SSH channel
 logger = logging.getLogger("netmiko")
 host1 = {                                                       # Enter Device information
-    "host": "10.165.240.208",
+    "host": "10.165.240.214",
     "username": "montanaro",
     "password": "Am15171924",
     "device_type": "huawei",
-    "global_delay_factor": 0.1,                                   # Increase all sleeps by a factor of 1
+    "global_delay_factor": 0.1,
+    "conn_timeout": 15,
+    # Increase all sleeps by a factor of 1
 }
 
 net_connect = Netmiko(**host1)

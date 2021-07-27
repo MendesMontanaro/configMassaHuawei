@@ -9,7 +9,8 @@ DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
 DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
 DEBUG:paramiko.transport:Compression agreed: none
 DEBUG:paramiko.transport:EOF in transport thread
--------------------------------------------------------------------------------------DEBUG:paramiko.transport:starting thread (client mode): 0x6a7efdc0
+-------------------------------------------------------------------------------------
+DEBUG:paramiko.transport:starting thread (client mode): 0x6a7efdc0
 DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.6.0
 DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
 INFO:paramiko.transport:Connected (version 2.0, client -)
@@ -169,4 +170,470 @@ snmp-agent sys-info location Crateus/CE
 snmp-agent sys-info version v2c v3
 [CE-CTS-E01-BKB-SW001]return
 <CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xc7722d00
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.6.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group16-sha512', 'diffie-hellman-group15-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr'] server encrypt:['aes256-ctr', 'aes128-ctr'] client mac:['hmac-sha2-256'] server mac:['hmac-sha2-256'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group16-sha512
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup16SHA512 specified hash_algo <built-in function openssl_sha512>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 10.165.240.208: b'1a83675d2c3977b74925f0dc7c3212e5'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:Pattern is: ((Change now|Please choose))|([\]>]\s*$)
+DEBUG:netmiko:_read_channel_expect read_data: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+DEBUG:netmiko:_read_channel_expect read_data: 
+      The current login time is 2021-07-27 10:37:59-03:00.
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:Pattern found: ((Change now|Please choose))|([\]>]\s*$) 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-07-27 10:37:59-03:00.
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'N\n'
+DEBUG:netmiko:read_channel: N
+                        ^
+Error:Incomplete command found at '^' position.
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:prompt: CE-CTS-E01-BKB-SW001
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: screen-length 0 temporary
+
+DEBUG:netmiko:write_channel: b'screen-length 0 temporary\n'
+DEBUG:netmiko:Pattern is: screen\-length\ 0\ temporary
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: creen-length 
+DEBUG:netmiko:_read_channel_expect read_data: 0 temporary
+Info: The configuration takes effect on the current user terminal interface only.
+DEBUG:netmiko:Pattern found: screen\-length\ 0\ temporary screen-length 0 temporary
+Info: The configuration takes effect on the current user terminal interface only.
+DEBUG:netmiko:screen-length 0 temporary
+Info: The configuration takes effect on the current user terminal interface only.
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'system-view\n'
+DEBUG:netmiko:Pattern is: system\-view
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: ystem-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CTS-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: system\-view system-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CTS-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[CE-CTS-E01-BKB-SW001]
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'dis cur | in info\n'
+DEBUG:netmiko:Pattern is: dis\ cur\ \|\ in\ info
+DEBUG:netmiko:_read_channel_expect read_data: d
+DEBUG:netmiko:_read_channel_expect read_data: is cur | in i
+DEBUG:netmiko:_read_channel_expect read_data: nfo
+DEBUG:netmiko:Pattern found: dis\ cur\ \|\ in\ info dis cur | in info
+DEBUG:netmiko:Pattern is: (?:CE\-CTS\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center loghost 10.240.150.34 source-ip 10.165.240.208 facility local6 port 5440
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center trapbuffer size 1024
+info-center timestamp debugging format-date without-timezone
+info-center timestamp log date without-timezone
+info-center timestamp trap format-date without-timezone
+DEBUG:netmiko:_read_channel_expect read_data: 
+snmp-agent sys-info contact noc@online.net.br
+DEBUG:netmiko:_read_channel_expect read_data: 
+snmp-agent sys-info location Crateus/CE
+snmp-agent sys-info version v2c v3
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CTS-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CTS\-E01\-BKB\-SW001|#) 
+info-center loghost 10.240.150.34 source-ip 10.165.240.208 facility local6 port 5440
+info-center trapbuffer size 1024
+info-center timestamp debugging format-date without-timezone
+info-center timestamp log date without-timezone
+info-center timestamp trap format-date without-timezone
+snmp-agent sys-info contact noc@online.net.br
+snmp-agent sys-info location Crateus/CE
+snmp-agent sys-info version v2c v3
+[CE-CTS-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[CE-CTS-E01-BKB-SW001]
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'return\n'
+DEBUG:netmiko:Pattern is: return
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: eturn
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:Pattern found: return return
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:exit_config_mode: return
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:system-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CTS-E01-BKB-SW001]dis cur | in info
+info-center loghost 10.240.150.34 source-ip 10.165.240.208 facility local6 port 5440
+info-center trapbuffer size 1024
+info-center timestamp debugging format-date without-timezone
+info-center timestamp log date without-timezone
+info-center timestamp trap format-date without-timezone
+snmp-agent sys-info contact noc@online.net.br
+snmp-agent sys-info location Crateus/CE
+snmp-agent sys-info version v2c v3
+[CE-CTS-E01-BKB-SW001]return
+<CE-CTS-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'exit\n'
+DEBUG:paramiko.transport:starting thread (client mode): 0xa053bcd0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.6.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group16-sha512', 'diffie-hellman-group15-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group16-sha512
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:EOF in transport thread
+DEBUG:paramiko.transport:starting thread (client mode): 0x36687cd0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.6.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group16-sha512', 'diffie-hellman-group15-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group16-sha512
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup16SHA512 specified hash_algo <built-in function openssl_sha512>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 10.165.240.214: b'9054e46ee78a2cd48af03a6582251a2e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:Pattern is: ((Change now|Please choose))|([\]>]\s*$)
+DEBUG:netmiko:_read_channel_expect read_data: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+DEBUG:netmiko:_read_channel_expect read_data: 
+      The current login time is 2021-07-27 10:45:58-03:00.
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Pattern found: ((Change now|Please choose))|([\]>]\s*$) 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-07-27 10:45:58-03:00.
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'N\n'
+DEBUG:netmiko:read_channel: N
+
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel:                         ^
+Error:Incomplete command found at '^' position.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:prompt: CE-CRT-E01-BKB-SW001
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: screen-length 0 temporary
+
+DEBUG:netmiko:write_channel: b'screen-length 0 temporary\n'
+DEBUG:netmiko:Pattern is: screen\-length\ 0\ temporary
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: creen-length 
+DEBUG:netmiko:_read_channel_expect read_data: 0 temp
+DEBUG:netmiko:_read_channel_expect read_data: orary
+DEBUG:netmiko:Pattern found: screen\-length\ 0\ temporary screen-length 0 temporary
+DEBUG:netmiko:screen-length 0 temporary
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+Info: The configuration takes effect on the current user terminal interface only.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'system-view\n'
+DEBUG:netmiko:Pattern is: system\-view
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: ystem-
+DEBUG:netmiko:_read_channel_expect read_data: view
+Enter system view, return user view with Ctrl+Z.
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: system\-view system-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'dis cur | in info\n'
+DEBUG:netmiko:Pattern is: dis\ cur\ \|\ in\ info
+DEBUG:netmiko:_read_channel_expect read_data: d
+DEBUG:netmiko:_read_channel_expect read_data: is cur
+DEBUG:netmiko:_read_channel_expect read_data:  | in i
+DEBUG:netmiko:_read_channel_expect read_data: nfo
+DEBUG:netmiko:Pattern found: dis\ cur\ \|\ in\ info dis cur | in info
+DEBUG:netmiko:Pattern is: (?:CE\-CRT\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center channel 6 name loghost1
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center filter-id bymodule-alias IFNET BWRATE_IN_RISING
+info-center filter-id bymodule-alias IFNET BWRATE_IN_RESUME
+info-center filter-id bymodule-alias IFNET BWRATE_OUT_RISING
+info-center filter-id bymodule-alias IFNET BWRATE_OUT_RESUME
+info-center filter-id bymodule-alias NTP LEAP_CHANGE
+info-center filter-id bymodule-alias NTP STRATUM_CHANGE
+info-center filter-id bymodule-alias NTP PEER_SELE
+info-center filter-id bymodule-alias NTP SOURCE_LOST
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center filter-id bymodule-alias VTY ACL_DENY
+info-center filter-id bymodule-alias SSH SSH_FAIL
+info-center filter-id bymodule-alias SNMP SNMP_FAIL
+info-center filter-id bymodule-alias SNMP SNMP_IPLOCK
+info-center filter-id bymodule-alias SNMP SNMP_IPUNLOCK
+info-center filter-id bymodule-alias OSPF LSA_CHANGE_FREQUENT
+info-center filter-id bymodule-alias SECE ARPMISS_SIP_SPEEDLIMIT_ALARM
+info-center filter-id bymodule-alias DEFD CPCAR_DROP_LPU
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center filter-id bymodule-alias QOSE CONGESTIONRISK
+info-center filter-id bymodule-alias IFPDT INT_INBRDR
+info-center filter-id bymodule-alias IFPDT INT_OUTBRDR
+info-center source L2V channel 2
+info-center source SECE channel 2
+info-center source OSPFV3 channel 2
+info-center source OSPF channel 2
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center source SRM channel 2 log level debugging
+info-center source MPLS channel 2
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center source DEFD channel 2 log state off
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center source LDP channel 2
+info-center source SHELL channel 2
+info-center source default channel 4 trap level informational
+info-center source OSPF channel 4 log level informational trap level informational
+info-center source SHELL channel 4 log level debugging
+info-center source SECE channel 4 log state off
+info-center source OSPFV3 channel 4 log level informational
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center source SRM channel 4 log level debugging
+info-center source MPLS channel 4 log level informational
+info-center source DEFD channel 4 log state off
+info-center source L2V channel 4 log level informational
+info-center source LDP channel 4 log level informational
+info-center loghost source LoopBack0
+info-center trapbuffer size 1024
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center timestamp log date without-timezone
+info-center max-logfile-number 30
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center logfile size 16
+DEBUG:netmiko:_read_channel_expect read_data: 
+info-center rate-limit threshold 60
+DEBUG:netmiko:_read_channel_expect read_data: 
+snmp-agent sys-info contact noc@metronw.com.br
+DEBUG:netmiko:_read_channel_expect read_data: 
+snmp-agent sys-info location CROATA - CEARA - Brasil
+snmp-agent sys-info version all
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CRT\-E01\-BKB\-SW001|#) 
+info-center channel 6 name loghost1
+info-center filter-id bymodule-alias IFNET BWRATE_IN_RISING
+info-center filter-id bymodule-alias IFNET BWRATE_IN_RESUME
+info-center filter-id bymodule-alias IFNET BWRATE_OUT_RISING
+info-center filter-id bymodule-alias IFNET BWRATE_OUT_RESUME
+info-center filter-id bymodule-alias NTP LEAP_CHANGE
+info-center filter-id bymodule-alias NTP STRATUM_CHANGE
+info-center filter-id bymodule-alias NTP PEER_SELE
+info-center filter-id bymodule-alias NTP SOURCE_LOST
+info-center filter-id bymodule-alias VTY ACL_DENY
+info-center filter-id bymodule-alias SSH SSH_FAIL
+info-center filter-id bymodule-alias SNMP SNMP_FAIL
+info-center filter-id bymodule-alias SNMP SNMP_IPLOCK
+info-center filter-id bymodule-alias SNMP SNMP_IPUNLOCK
+info-center filter-id bymodule-alias OSPF LSA_CHANGE_FREQUENT
+info-center filter-id bymodule-alias SECE ARPMISS_SIP_SPEEDLIMIT_ALARM
+info-center filter-id bymodule-alias DEFD CPCAR_DROP_LPU
+info-center filter-id bymodule-alias QOSE CONGESTIONRISK
+info-center filter-id bymodule-alias IFPDT INT_INBRDR
+info-center filter-id bymodule-alias IFPDT INT_OUTBRDR
+info-center source L2V channel 2
+info-center source SECE channel 2
+info-center source OSPFV3 channel 2
+info-center source OSPF channel 2
+info-center source SRM channel 2 log level debugging
+info-center source MPLS channel 2
+info-center source DEFD channel 2 log state off
+info-center source LDP channel 2
+info-center source SHELL channel 2
+info-center source default channel 4 trap level informational
+info-center source OSPF channel 4 log level informational trap level informational
+info-center source SHELL channel 4 log level debugging
+info-center source SECE channel 4 log state off
+info-center source OSPFV3 channel 4 log level informational
+info-center source SRM channel 4 log level debugging
+info-center source MPLS channel 4 log level informational
+info-center source DEFD channel 4 log state off
+info-center source L2V channel 4 log level informational
+info-center source LDP channel 4 log level informational
+info-center loghost source LoopBack0
+info-center trapbuffer size 1024
+info-center timestamp log date without-timezone
+info-center max-logfile-number 30
+info-center logfile size 16
+info-center rate-limit threshold 60
+snmp-agent sys-info contact noc@metronw.com.br
+snmp-agent sys-info location CROATA - CEARA - Brasil
+snmp-agent sys-info version all
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'return\n'
+DEBUG:netmiko:Pattern is: return
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: eturn
+DEBUG:netmiko:Pattern found: return return
+DEBUG:netmiko:Pattern is: >
+DEBUG:netmiko:_read_channel_expect read_data: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Pattern found: > 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:exit_config_mode: return
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:system-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CRT-E01-BKB-SW001]dis cur | in info
+info-center channel 6 name loghost1
+info-center filter-id bymodule-alias IFNET BWRATE_IN_RISING
+info-center filter-id bymodule-alias IFNET BWRATE_IN_RESUME
+info-center filter-id bymodule-alias IFNET BWRATE_OUT_RISING
+info-center filter-id bymodule-alias IFNET BWRATE_OUT_RESUME
+info-center filter-id bymodule-alias NTP LEAP_CHANGE
+info-center filter-id bymodule-alias NTP STRATUM_CHANGE
+info-center filter-id bymodule-alias NTP PEER_SELE
+info-center filter-id bymodule-alias NTP SOURCE_LOST
+info-center filter-id bymodule-alias VTY ACL_DENY
+info-center filter-id bymodule-alias SSH SSH_FAIL
+info-center filter-id bymodule-alias SNMP SNMP_FAIL
+info-center filter-id bymodule-alias SNMP SNMP_IPLOCK
+info-center filter-id bymodule-alias SNMP SNMP_IPUNLOCK
+info-center filter-id bymodule-alias OSPF LSA_CHANGE_FREQUENT
+info-center filter-id bymodule-alias SECE ARPMISS_SIP_SPEEDLIMIT_ALARM
+info-center filter-id bymodule-alias DEFD CPCAR_DROP_LPU
+info-center filter-id bymodule-alias QOSE CONGESTIONRISK
+info-center filter-id bymodule-alias IFPDT INT_INBRDR
+info-center filter-id bymodule-alias IFPDT INT_OUTBRDR
+info-center source L2V channel 2
+info-center source SECE channel 2
+info-center source OSPFV3 channel 2
+info-center source OSPF channel 2
+info-center source SRM channel 2 log level debugging
+info-center source MPLS channel 2
+info-center source DEFD channel 2 log state off
+info-center source LDP channel 2
+info-center source SHELL channel 2
+info-center source default channel 4 trap level informational
+info-center source OSPF channel 4 log level informational trap level informational
+info-center source SHELL channel 4 log level debugging
+info-center source SECE channel 4 log state off
+info-center source OSPFV3 channel 4 log level informational
+info-center source SRM channel 4 log level debugging
+info-center source MPLS channel 4 log level informational
+info-center source DEFD channel 4 log state off
+info-center source L2V channel 4 log level informational
+info-center source LDP channel 4 log level informational
+info-center loghost source LoopBack0
+info-center trapbuffer size 1024
+info-center timestamp log date without-timezone
+info-center max-logfile-number 30
+info-center logfile size 16
+info-center rate-limit threshold 60
+snmp-agent sys-info contact noc@metronw.com.br
+snmp-agent sys-info location CROATA - CEARA - Brasil
+snmp-agent sys-info version all
+[CE-CRT-E01-BKB-SW001]return
+<CE-CRT-E01-BKB-SW001>
 DEBUG:netmiko:write_channel: b'exit\n'
