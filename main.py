@@ -55,9 +55,14 @@ def config_mass():
             configname = "CONFIG__" + iplist[line] + "__" + filetemp
 
             net_connect = netmiko.Netmiko(**host)
-            command1 = ["dis cur | in info"]  # Enter set of commands
-            print("Connected to:", net_connect.find_prompt())  # Display hostname
-            output = net_connect.send_config_set(command1, delay_factor=.5)  # Run set of commands in order
+            print("Conectado ao switch:", net_connect.find_prompt())  # Display hostname
+            command1 = ['info-center loghost 10.240.150.34 source-ip ' + iplist[line] + ' facility local6 port 5440',
+                        'info-center trapbuffer size 1024',
+                        'info-center timestamp debugging format-date without-timezone',
+                        'info-center timestamp log date without-timezone',
+                        'info-center timestamp trap format-date without-timezone']
+
+            output = net_connect.send_config_set(command1, delay_factor=.1)  # Run set of commands in order
 
             # Increase the sleeps for just send_command by a factor of 2
             net_connect.disconnect()  # Disconnect from Session

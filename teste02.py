@@ -1,3 +1,5 @@
+import time
+
 from netmiko import Netmiko
 import logging
 logging.basicConfig(filename="test.log", level=logging.DEBUG)   # It will log all reads and writes on the SSH channel
@@ -13,7 +15,7 @@ host1 = {                                                       # Enter Device i
 }
 
 net_connect = Netmiko(**host1)
-command1 = ["dis cur | in info"]  # Enter set of commands
+command1 = ["snmp-agent udp-port 1026","Y"]  # Enter set of commands
 print("Connected to:", net_connect.find_prompt())               # Display hostname
 output = net_connect.send_config_set(command1, delay_factor=.5) # Run set of commands in order
 
