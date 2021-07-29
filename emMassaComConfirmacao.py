@@ -3,7 +3,7 @@ import signal
 import netmiko
 import logging
 
-logging.basicConfig(filename='semconfirm.log', level=logging.DEBUG)
+logging.basicConfig(filename='conconfirm.log', level=logging.DEBUG)
 logger = logging.getLogger('netmiko')
 
 iplist = []
@@ -56,29 +56,24 @@ def config_mass():
 
             net_connect = netmiko.Netmiko(**host)
             print("Conectado ao switch:", net_connect.find_prompt())  # Display hostname
-            command1 = ['info-center loghost 10.240.150.34 source-ip ' + iplist[line] + ' facility local6 port 5440',
-                        'info-center trapbuffer size 1024',
-                        'info-center timestamp debugging format-date without-timezone',
-                        'info-center timestamp log date without-timezone',
-                        'info-center timestamp trap format-date without-timezone']
-
+            command1 = ['snmp-agent udp-port 1026\ny', 'dis cur | in snmp-agent udp-port']
             output = net_connect.send_config_set(command1, delay_factor=.1)  # Run set of commands in order
-
             # Increase the sleeps for just send_command by a factor of 2
             net_connect.disconnect()  # Disconnect from Session
-            print(output)
-
             pass
             print("config FINALIZADA NO IP ", iplist[line], " às ", datatime)
 
+      #  except netmiko.ssh_exception.NetmikoTimeoutException as erro:
+           # print(erro)
+     #       continue
 
-        except Exception as e:  # Essa exceção irá tratar caso o script não consiga logar na porta 22
-            arqconfig = open("erroconfig" + datatime + ".txt", "a+")
-            arqconfig.write("Erro no login através da porta 22 no ip - " + tempip + ":" + str(e) + "\n")
-            arqconfig.close()
-            signal.alarm(0)
-            # print(e)
-            continue
+      #  except Exception as e:  # Essa exceção irá tratar caso o script não consiga logar na porta 22
+     #       arqconfig = open("erroconfig" + datatime + ".txt", "a+")
+     #       arqconfig.write("Erro no login através da porta 22 no ip - " + tempip + ":" + str(e) + "\n")
+     #       arqconfig.close()
+     #       signal.alarm(0)
+     #       print(e)
+      #      continue
 
         except ValueError as e2:
             arqconfig = open("erroconfig" + datatime + ".txt", "a+")

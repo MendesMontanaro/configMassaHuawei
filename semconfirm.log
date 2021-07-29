@@ -1,0 +1,219 @@
+DEBUG:paramiko.transport:starting thread (client mode): 0xf91dc9a0
+DEBUG:paramiko.transport:Local version/idstring: SSH-2.0-paramiko_2.6.0
+DEBUG:paramiko.transport:Remote version/idstring: SSH-2.0--
+INFO:paramiko.transport:Connected (version 2.0, client -)
+DEBUG:paramiko.transport:kex algos:['diffie-hellman-group16-sha512', 'diffie-hellman-group15-sha512', 'diffie-hellman-group14-sha256', 'diffie-hellman-group-exchange-sha256', 'diffie-hellman-group-exchange-sha1', 'diffie-hellman-group14-sha1'] server key:['ecdsa-sha2-nistp521', 'ssh-dss', 'ssh-rsa'] client encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] server encrypt:['aes256-ctr', 'aes128-ctr', 'aes256-cbc', 'aes128-cbc', '3des-cbc'] client mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] server mac:['hmac-sha2-256', 'hmac-sha2-256-96', 'hmac-sha1', 'hmac-sha1-96', 'hmac-md5', 'hmac-md5-96'] client compress:['none', 'zlib'] server compress:['none', 'zlib'] client lang:[''] server lang:[''] kex follows?False
+DEBUG:paramiko.transport:Kex agreed: diffie-hellman-group16-sha512
+DEBUG:paramiko.transport:HostKey agreed: ecdsa-sha2-nistp521
+DEBUG:paramiko.transport:Cipher agreed: aes128-ctr
+DEBUG:paramiko.transport:MAC agreed: hmac-sha2-256
+DEBUG:paramiko.transport:Compression agreed: none
+DEBUG:paramiko.transport:kex engine KexGroup16SHA512 specified hash_algo <built-in function openssl_sha512>
+DEBUG:paramiko.transport:Switch to new keys ...
+DEBUG:paramiko.transport:Adding ecdsa-sha2-nistp521 host key for 10.165.240.214: b'9054e46ee78a2cd48af03a6582251a2e'
+DEBUG:paramiko.transport:userauth is OK
+INFO:paramiko.transport:Authentication (password) successful!
+DEBUG:paramiko.transport:[chan 0] Max packet in: 32768 bytes
+DEBUG:paramiko.transport:[chan 0] Max packet out: 32768 bytes
+DEBUG:paramiko.transport:Secsh channel 0 opened.
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:paramiko.transport:[chan 0] Sesch channel 0 request ok
+DEBUG:netmiko:Pattern is: ((Change now|Please choose))|([\]>]\s*$)
+DEBUG:netmiko:_read_channel_expect read_data: 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+DEBUG:netmiko:_read_channel_expect read_data: 
+      The current login time is 2021-07-29 18:07:31-03:00.
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Pattern found: ((Change now|Please choose))|([\]>]\s*$) 
+Info: The max number of VTY users is 10, and the number
+      of current VTY users on line is 1.
+      The current login time is 2021-07-29 18:07:31-03:00.
+Info: Smart-upgrade is currently disabled. Enable Smart-upgrade to get recommended version information.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'N\n'
+DEBUG:netmiko:read_channel: N
+
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel:                         ^
+Error:Incomplete command found at '^' position.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:prompt: CE-CRT-E01-BKB-SW001
+DEBUG:netmiko:In disable_paging
+DEBUG:netmiko:Command: screen-length 0 temporary
+
+DEBUG:netmiko:write_channel: b'screen-length 0 temporary\n'
+DEBUG:netmiko:Pattern is: screen\-length\ 0\ temporary
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: creen-
+DEBUG:netmiko:_read_channel_expect read_data: length
+DEBUG:netmiko:_read_channel_expect read_data:  0 temp
+DEBUG:netmiko:_read_channel_expect read_data: orary
+DEBUG:netmiko:Pattern found: screen\-length\ 0\ temporary screen-length 0 temporary
+DEBUG:netmiko:screen-length 0 temporary
+DEBUG:netmiko:Exiting disable_paging
+DEBUG:netmiko:read_channel: 
+Info: The configuration takes effect on the current user terminal interface only.
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Clear buffer detects data in the channel
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:[find_prompt()]: prompt is <CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'system-view\n'
+DEBUG:netmiko:Pattern is: system\-view
+DEBUG:netmiko:_read_channel_expect read_data: s
+DEBUG:netmiko:_read_channel_expect read_data: ystem-
+DEBUG:netmiko:_read_channel_expect read_data: view
+Enter system view, return user view with Ctrl+Z.
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: system\-view system-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'info-center loghost 10.240.150.34 source-ip 10.165.240.214 facility local6 port 5440\n'
+DEBUG:netmiko:Pattern is: info\-center\ loghost\ 10\.240\.150\.34\ source\-ip\ 10\.165\.240\.214\ facility\ local6\ port\ 5440
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nfo-ce
+DEBUG:netmiko:_read_channel_expect read_data: nter lo
+DEBUG:netmiko:_read_channel_expect read_data: ghost 
+DEBUG:netmiko:_read_channel_expect read_data: 10.240.
+DEBUG:netmiko:_read_channel_expect read_data: 150.34
+DEBUG:netmiko:_read_channel_expect read_data:  source
+DEBUG:netmiko:_read_channel_expect read_data: -ip 10
+DEBUG:netmiko:_read_channel_expect read_data: .165.24
+DEBUG:netmiko:_read_channel_expect read_data: 0.214 
+DEBUG:netmiko:_read_channel_expect read_data: facili
+DEBUG:netmiko:_read_channel_expect read_data: ty loca
+DEBUG:netmiko:_read_channel_expect read_data: l6 por
+DEBUG:netmiko:_read_channel_expect read_data: t 5440
+DEBUG:netmiko:Pattern found: info\-center\ loghost\ 10\.240\.150\.34\ source\-ip\ 10\.165\.240\.214\ facility\ local6\ port\ 5440 info-center loghost 10.240.150.34 source-ip 10.165.240.214 facility local6 port 5440
+DEBUG:netmiko:Pattern is: (?:CE\-CRT\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CRT\-E01\-BKB\-SW001|#) 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'info-center trapbuffer size 1024\n'
+DEBUG:netmiko:Pattern is: info\-center\ trapbuffer\ size\ 1024
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nfo-ce
+DEBUG:netmiko:_read_channel_expect read_data: nter tr
+DEBUG:netmiko:_read_channel_expect read_data: apbuff
+DEBUG:netmiko:_read_channel_expect read_data: er size
+DEBUG:netmiko:_read_channel_expect read_data:  1024
+DEBUG:netmiko:Pattern found: info\-center\ trapbuffer\ size\ 1024 info-center trapbuffer size 1024
+DEBUG:netmiko:Pattern is: (?:CE\-CRT\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CRT\-E01\-BKB\-SW001|#) 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'info-center timestamp debugging format-date without-timezone\n'
+DEBUG:netmiko:Pattern is: info\-center\ timestamp\ debugging\ format\-date\ without\-timezone
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nfo-cen
+DEBUG:netmiko:_read_channel_expect read_data: ter tim
+DEBUG:netmiko:_read_channel_expect read_data: estamp 
+DEBUG:netmiko:_read_channel_expect read_data: debugg
+DEBUG:netmiko:_read_channel_expect read_data: ing for
+DEBUG:netmiko:_read_channel_expect read_data: mat-dat
+DEBUG:netmiko:_read_channel_expect read_data: e witho
+DEBUG:netmiko:_read_channel_expect read_data: ut-time
+DEBUG:netmiko:_read_channel_expect read_data: zone
+DEBUG:netmiko:Pattern found: info\-center\ timestamp\ debugging\ format\-date\ without\-timezone info-center timestamp debugging format-date without-timezone
+DEBUG:netmiko:Pattern is: (?:CE\-CRT\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CRT\-E01\-BKB\-SW001|#) 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'info-center timestamp log date without-timezone\n'
+DEBUG:netmiko:Pattern is: info\-center\ timestamp\ log\ date\ without\-timezone
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nfo-cen
+DEBUG:netmiko:_read_channel_expect read_data: ter tim
+DEBUG:netmiko:_read_channel_expect read_data: estamp
+DEBUG:netmiko:_read_channel_expect read_data:  log dat
+DEBUG:netmiko:_read_channel_expect read_data: e with
+DEBUG:netmiko:_read_channel_expect read_data: out-tim
+DEBUG:netmiko:_read_channel_expect read_data: ezone
+DEBUG:netmiko:Pattern found: info\-center\ timestamp\ log\ date\ without\-timezone info-center timestamp log date without-timezone
+DEBUG:netmiko:Pattern is: (?:CE\-CRT\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CRT\-E01\-BKB\-SW001|#) 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'info-center timestamp trap format-date without-timezone\n'
+DEBUG:netmiko:Pattern is: info\-center\ timestamp\ trap\ format\-date\ without\-timezone
+DEBUG:netmiko:_read_channel_expect read_data: i
+DEBUG:netmiko:_read_channel_expect read_data: nfo-cen
+DEBUG:netmiko:_read_channel_expect read_data: ter tim
+DEBUG:netmiko:_read_channel_expect read_data: estamp
+DEBUG:netmiko:_read_channel_expect read_data:  trap f
+DEBUG:netmiko:_read_channel_expect read_data: ormat-d
+DEBUG:netmiko:_read_channel_expect read_data: ate wi
+DEBUG:netmiko:_read_channel_expect read_data: thout-t
+DEBUG:netmiko:_read_channel_expect read_data: imezone
+DEBUG:netmiko:Pattern found: info\-center\ timestamp\ trap\ format\-date\ without\-timezone info-center timestamp trap format-date without-timezone
+DEBUG:netmiko:Pattern is: (?:CE\-CRT\-E01\-BKB\-SW001|#)
+DEBUG:netmiko:_read_channel_expect read_data: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:Pattern found: (?:CE\-CRT\-E01\-BKB\-SW001|#) 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+[CE-CRT-E01-BKB-SW001]
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:write_channel: b'return\n'
+DEBUG:netmiko:Pattern is: return
+DEBUG:netmiko:_read_channel_expect read_data: r
+DEBUG:netmiko:_read_channel_expect read_data: eturn
+DEBUG:netmiko:Pattern found: return return
+DEBUG:netmiko:Pattern is: >
+DEBUG:netmiko:_read_channel_expect read_data: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:Pattern found: > 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'\n'
+DEBUG:netmiko:read_channel: 
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:read_channel: 
+DEBUG:netmiko:exit_config_mode: return
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:system-view
+Enter system view, return user view with Ctrl+Z.
+[CE-CRT-E01-BKB-SW001]info-center loghost 10.240.150.34 source-ip 10.165.240.214 facility local6 port 5440
+[CE-CRT-E01-BKB-SW001]info-center trapbuffer size 1024
+[CE-CRT-E01-BKB-SW001]info-center timestamp debugging format-date without-timezone
+[CE-CRT-E01-BKB-SW001]info-center timestamp log date without-timezone
+[CE-CRT-E01-BKB-SW001]info-center timestamp trap format-date without-timezone
+[CE-CRT-E01-BKB-SW001]return
+<CE-CRT-E01-BKB-SW001>
+DEBUG:netmiko:write_channel: b'exit\n'

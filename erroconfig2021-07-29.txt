@@ -1,0 +1,8 @@
+Erro no login através da porta 22 no ip - 10.165.240.214:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.201:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.219:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.231:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.214:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.214:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.214:Timed-out reading channel, data not available.
+Erro no login através da porta 22 no ip - 10.165.240.214:Timed-out reading channel, data not available.
