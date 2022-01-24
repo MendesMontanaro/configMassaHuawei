@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 
 host = '10.165.240.214'
 username = 'montanaro'
-password = 'Am15171924'
+password = '123456789'
 
 huawei = {'device_type': 'huawei', 'host': host, 'username': username, 'password': password, "fast_cli": False, }
 
