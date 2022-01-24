@@ -5,7 +5,7 @@ logger = logging.getLogger("netmiko")
 host1 = {                                                       # Enter Device information
     "host": "10.165.240.214",
     "username": "montanaro",
-    "password": "Am15171924",
+    "password": "123456789",
     "device_type": "huawei",
     "global_delay_factor": 0.1,
     "conn_timeout": 15,
