@@ -9,7 +9,7 @@ logger = logging.getLogger('netmiko')
 iplist = []
 timelist = []
 login = 'montanaro'
-passwd = 'Am15171924'
+passwd = '123456789'
 
 
 class TimeoutException(Exception):
@@ -47,7 +47,7 @@ def config_mass():
             filetemp = time.strftime("%Y-%m-%d -- %H:%M:%S")
             initime = time.strftime("%H:%M:%S")
             tempip = iplist[line]
-            host = {"host": iplist[line], "username": "montanaro", "password": "Am15171924", "device_type": "huawei",
+            host = {"host": iplist[line], "username": "montanaro", "password": "123456789", "device_type": "huawei",
                     "global_delay_factor": 0.1, "conn_timeout": 15, }
             x_count = 0
             comment = "PROCESSO DE REALIZAÇÃO DE CONFIGURAÇÃO: " + filetemp + " DO HOST:  DE IP: " + iplist[line]
